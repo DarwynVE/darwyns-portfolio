@@ -6,7 +6,7 @@ export default function HomePage() {
             Test
             <Button 
             
-            >Text</Button>
+            >Text2</Button>
         </div>
     )
 }
