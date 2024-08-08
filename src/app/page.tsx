@@ -1,9 +1,12 @@
 import Image from "next/image";
+import Router from "next/router";
 import styles from "./page.module.css";
+import HomePage from "@/components/homePage/homePage";
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <HomePage />
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
