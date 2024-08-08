@@ -1,8 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Router from 'next/router';
-// import styles from "./page.module.css";
 import HomePage from "@/components/homePage/homePage";
 import Modal from '@mui/material/Modal';
 import ContactInfo from "@/components/contactInfo/contactInfo";
