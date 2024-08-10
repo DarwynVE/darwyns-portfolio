@@ -4,7 +4,7 @@ import NavBars from '../navBars/navBars';
 export default function HomePage() {
     return (
         <div>
-           Portfolio
+           Darwyns Portfolio
            <NavBars />
         </div>
     )
