@@ -2,7 +2,6 @@
 import ContactInfo from '../contactInfo/contactInfo';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import { useState } from 'react';
 import AppBar from '@mui/material/AppBar'
@@ -39,7 +38,7 @@ export default function NavBars() {
                     <Modal
                         open={open}
                         onClose={handleClose}>
-                        <ContactInfo />
+                        <ContactInfo handleClose={handleClose}/>
                     </Modal>
         </Box>
     )
