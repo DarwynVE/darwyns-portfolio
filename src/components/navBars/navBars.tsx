@@ -29,7 +29,8 @@ export default function NavBars() {
                     </Typography>
                     <Button
                         onClick={handleOpen}
-                        sx={{color: '#474747'}}
+                        variant='outlined'
+                        sx={{color: '#474747', borderColor: '#474747'}} 
                     >
                         Contact Info
                     </Button>

@@ -1,9 +1,4 @@
-import Container from '@mui/material/Container';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText'
-import ListSubheader from '@mui/material/ListSubheader';
-import Divider from '@mui/material/Divider'
+import { Container, List, ListItem, ListItemText, Divider } from '@mui/material';
 
 export default function ContactInfo() {
     return (

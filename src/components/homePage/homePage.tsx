@@ -1,8 +1,14 @@
-import { Button } from '@mui/material';
 import NavBars from '../navBars/navBars';
+import UserInfo from '../userInfo/userInfo';
+import Experiences from '../experiences/experiences';
+import { Box } from '@mui/material';
 
 export default function HomePage() {
     return (
-        <NavBars />
+        <Box>
+            <NavBars />
+            <UserInfo />
+            <Experiences />
+        </Box>
     )
 }
