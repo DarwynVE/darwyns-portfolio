@@ -1,11 +1,10 @@
-import { useState } from 'react';
 import { Container, List, ListItem, ListItemText, Divider } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
-export default function ContactInfo({handleClose }) {
+export default function ContactInfo({ handleClose }) {
     return (
             <Container
-                sx={{ width: '28em', height: 'auto', background: '#FFFFFF', marginTop: '2em', borderRadius: '10px' }}
+                sx={{ width: '28em', height: 'auto', background: '#FFFFFF', marginTop: '2em', borderRadius: '10px', border: '2px solid black' }}
             >
                 <List
                     sx={{ display: 'flex', flexDirection: 'column', padding: '1em' }}

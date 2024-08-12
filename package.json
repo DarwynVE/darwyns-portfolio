@@ -12,6 +12,7 @@
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.16.7",
+    "@mui/lab": "^5.0.0-alpha.173",
     "@mui/material": "^5.16.6",
     "next": "14.2.5",
     "react": "^18",
@@ -23,6 +24,8 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
+    "eslint-plugin-mui": "^0.1.1",
+    "eslint-plugin-mui-unused-classes": "^2.0.2",
     "typescript": "^5"
   }
 }
