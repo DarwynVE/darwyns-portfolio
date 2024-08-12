@@ -1,12 +1,56 @@
 "use client";
 import { useState } from 'react';
-import { Typography, Box, Tab, Tabs, Divider } from '@mui/material';
+import { Typography, Box, Tab, Tabs, Divider, styled } from '@mui/material';
 
 interface TabPanelProps {
     children?: React.ReactNode;
     index: number;
     value: number;
 }
+
+interface StyledTabsProps {
+    children?: React.ReactNode;
+    value: number;
+    onChange: (event: React.SyntheticEvent, newValue: number) => void;
+}
+const StyledTabs = styled((props: StyledTabsProps) => (
+    <Tabs
+        {...props}
+        TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
+    />
+))({
+    '& .MuiTabs-indicator': {
+        display: 'flex',
+        justifyContent: 'center',
+        backgroundColor: 'transparent',
+    },
+    '& .MuiTabs-indicatorSpan': {
+        maxWidth: 100,
+        width: '100%',
+        backgroundColor: '#af1b36',
+    },
+});
+
+interface StyledTabProps {
+    label: string;
+}
+
+const StyledTab = styled((props: StyledTabProps) => (
+    <Tab {...props} />
+))(({ theme }) => ({
+    textTransform: 'none',
+    fontWeight: theme.typography.fontWeightRegular,
+    fontSize: theme.typography.pxToRem(15),
+    marginRight: theme.spacing(1),
+    color: '#b2e3d9',
+    '&.Mui-selected': {
+        color: '#1baf95',
+        transition: 'ease-in-out 0.2s',
+    },
+    '&.Mui-focusVisible': {
+        backgroundColor: 'rgba(100, 95, 228, 0.32)',
+    },
+}));
 
 function CustomTabPanel(props: TabPanelProps) {
     const { children, value, index, ...other } = props;
@@ -37,19 +81,19 @@ export default function UserInfo() {
     };
 
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '2em' }}>
-            <Box sx={{ width: '30em' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '1em 0 1em 0' }}>
+            <Box sx={{ width: '30em', height: '12em' }}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <Tabs
+                    <StyledTabs
                         value={value}
                         onChange={handleChange}
                         aria-label="Tabs containing some information about me"
                         centered
-                        sx={{ justifyContent: 'center', alignContent: 'center', alignItems: 'center' }}>
-                        <Tab label="About Me" {...a11yProps(0)} />
-                        <Tab label="University" {...a11yProps(1)} />
-                        <Tab label="Question Mark" {...a11yProps(2)} />
-                    </Tabs>
+                        >
+                        <StyledTab label="About Me" {...a11yProps(0)} />
+                        <StyledTab label="University" {...a11yProps(1)} />
+                        <StyledTab label="Question Mark" {...a11yProps(2)} />
+                    </StyledTabs>
                 </Box>
 
                 <CustomTabPanel value={value} index={0}>
