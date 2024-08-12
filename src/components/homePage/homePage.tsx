@@ -3,9 +3,6 @@ import NavBars from '../navBars/navBars';
 
 export default function HomePage() {
     return (
-        <div>
-           Darwyns Portfolio
-           <NavBars />
-        </div>
+        <NavBars />
     )
 }

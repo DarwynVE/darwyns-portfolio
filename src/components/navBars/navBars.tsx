@@ -4,6 +4,7 @@ import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
 import { useState } from 'react';
 
 export default function NavBars() {
@@ -13,7 +14,12 @@ export default function NavBars() {
 
     return (
         <Container>
-            <Button onClick={handleOpen}>Open Modal</Button>
+            <List>
+                <ListItem>
+                    Test
+                </ListItem>
+            </List>
+            <Button onClick={handleOpen}>Contact Info</Button>
             <Modal
                 open={open}
                 onClose={handleClose}>
