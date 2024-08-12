@@ -3,9 +3,11 @@ import ContactInfo from '../contactInfo/contactInfo';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
+import Box from '@mui/material/Box';
 import { useState } from 'react';
+import AppBar from '@mui/material/AppBar'
+import Typography from '@mui/material/Typography';
+import Toolbar from '@mui/material/Toolbar';
 
 export default function NavBars() {
     const [open, setOpen] = useState();
@@ -13,18 +15,31 @@ export default function NavBars() {
     const handleClose = () => setOpen(false);
 
     return (
-        <Container>
-            <List>
-                <ListItem>
-                    Test
-                </ListItem>
-            </List>
-            <Button onClick={handleOpen}>Contact Info</Button>
-            <Modal
-                open={open}
-                onClose={handleClose}>
-                <ContactInfo />
-            </Modal>
-        </Container>
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar 
+            position='static'
+            sx={{background: '#DBDBDB'}}>
+                <Toolbar>
+                    <Typography
+                        variant='h6'
+                        component='div'
+                        sx={{ flexGrow: 1, color: '#474747'}}
+                    >
+                        DARWYNS PORTFOLIO
+                    </Typography>
+                    <Button
+                        onClick={handleOpen}
+                        sx={{color: '#474747'}}
+                    >
+                        Contact Info
+                    </Button>
+                </Toolbar>
+            </AppBar>
+                    <Modal
+                        open={open}
+                        onClose={handleClose}>
+                        <ContactInfo />
+                    </Modal>
+        </Box>
     )
 }
