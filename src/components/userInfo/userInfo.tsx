@@ -16,6 +16,7 @@ interface StyledTabsProps {
 const StyledTabs = styled((props: StyledTabsProps) => (
     <Tabs
         {...props}
+        centered
         TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
     />
 ))({
@@ -88,7 +89,7 @@ export default function UserInfo() {
                         value={value}
                         onChange={handleChange}
                         aria-label="Tabs containing some information about me"
-                        centered
+                        // centered
                         >
                         <StyledTab label="About Me" {...a11yProps(0)} />
                         <StyledTab label="University" {...a11yProps(1)} />
