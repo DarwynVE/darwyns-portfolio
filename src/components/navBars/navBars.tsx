@@ -1,16 +1,10 @@
 "use client";
-import ContactInfo from '../contactInfo/contactInfo';
-import Modal from '@mui/material/Modal';
-import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
 import { useState } from 'react';
-import AppBar from '@mui/material/AppBar'
-import Typography from '@mui/material/Typography';
-import Toolbar from '@mui/material/Toolbar';
+import { Modal, Button, Box, AppBar, Typography, Toolbar } from '@mui/material';
+import ContactInfo from '../contactInfo/contactInfo';
 
 export default function NavBars() {
-    const [open, setOpen] = useState();
+    const [open, setOpen] = useState<boolean>(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
@@ -30,7 +24,11 @@ export default function NavBars() {
                     <Button
                         onClick={handleOpen}
                         variant='outlined'
-                        sx={{color: '#474747', borderColor: '#474747'}} 
+                        sx={{color: '#474747', borderColor: '#474747',
+                            '&:hover' : {
+                                borderColor: 'blue',
+                            }
+                        }} 
                     >
                         Contact Info
                     </Button>
@@ -39,7 +37,7 @@ export default function NavBars() {
                     <Modal
                         open={open}
                         onClose={handleClose}>
-                        <ContactInfo />
+                        <ContactInfo handleClose={handleClose}/>
                     </Modal>
         </Box>
     )
