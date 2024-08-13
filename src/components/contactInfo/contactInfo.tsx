@@ -1,7 +1,11 @@
 import { Container, List, ListItem, ListItemText, Divider } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
-export default function ContactInfo({ handleClose }) {
+interface ContactInfoProps {
+    handleClose: () => void;
+}
+
+export default function ContactInfo({ handleClose }: ContactInfoProps) {
     return (
             <Container
                 sx={{ width: '28em', height: 'auto', background: '#FFFFFF', marginTop: '2em', borderRadius: '10px', border: '2px solid black' }}
