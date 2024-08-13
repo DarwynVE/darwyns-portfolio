@@ -5,14 +5,15 @@ import TimelineOppositeContent, { timelineOppositeContentClasses } from '@mui/la
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import React, { useState } from 'react';
-import { GCPLogo, MaterialUILogo, ReactLogo, JavaScriptLogo, TypeScriptLogo, ViteLogo } from '@/images';
+import Image from 'next/image';
+import { GCPLogo, MaterialUILogo, ReactLogo, JavaScriptLogo, TypeScriptLogo, ViteLogo, NextJSLogo, GitHubLogo } from '@/images';
 
 const timelineData = [
     {
         time: 'May 2024 - July 2024',
         title: 'Home Depot Software Engineer Internship',
         details: 'During this internship me and 3 other associates were able to create and deploy a scalable application for thousands of associates to use within the company. Using products such as GCP Firestore we established cloud connectivity for data storage. We also allowed live collaboration between associates. While working, I leveraged knowledge in Full Stack Web Development, REST API\'s, Git, REACT, Vitest, Node, GCP and Docker.',
-        icons: [ReactLogo, ViteLogo, JavaScriptLogo, MaterialUILogo, GCPLogo]
+        icons: [ReactLogo, ViteLogo, JavaScriptLogo, MaterialUILogo, GCPLogo, GitHubLogo]
     },
     {
         time: 'Dec 2022 - Present',
@@ -28,7 +29,7 @@ const projectsData = [
         time: 'August 2024',
         title: 'Portfolio Project',
         details: 'Suprise! You are currently on this project.',
-        icons: [ReactLogo, TypeScriptLogo, MaterialUILogo]
+        icons: [ReactLogo, NextJSLogo, TypeScriptLogo, MaterialUILogo, GitHubLogo]
     },
     {
         time: 'Nov 2023',
@@ -42,7 +43,6 @@ const projectsData = [
 export default function Experiences() {
     const [expandedWork, setExpandedWork] = useState(Array(timelineData.length).fill(false));
     const [expandedProjects, setExpandedProjects] = useState(Array(projectsData.length).fill(false));
-
     const handleExpandWorkClick = (index: number) => {
         setExpandedWork(expandedWork.map((exp, i) => (i === index ? !exp : exp)));
     };
@@ -101,11 +101,21 @@ export default function Experiences() {
                                         >{item.title}</Typography>
                                         {expandedWork[index] ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                                     </IconButton>
-                                    <Box>
-                                    {item.icons.map((icon, iconIndex) => (
-                                        <img key={iconIndex} src={icon} alt={`${item.title} logo`} style={{ width: 24, height: 24, marginRight: 4 }} />
-                                    ))}
                                 </Box>
+                                    <Box
+                                    sx={{
+                                        display: 'inline-flex',
+                                    }}>
+                                    {item.icons.map((icon, iconIndex) => (
+                                                    <Image 
+                                                    key={iconIndex}
+                                                    src={item.icons[iconIndex]}
+                                                    alt='icon'
+                                                    width={20}
+                                                    height={20}
+                                                    style={{ marginRight: '0.5em'}}
+                                                    />
+                                    ))}
                                 </Box>
                                 <Typography
                                     component='a'
@@ -165,6 +175,21 @@ export default function Experiences() {
                                         >{item.title}</Typography>
                                         {expandedProjects[index] ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                                     </IconButton>
+                                </Box>
+                                <Box
+                                    sx={{
+                                        display: 'inline-flex',
+                                    }}>
+                                    {item.icons.map((icon, iconIndex) => (
+                                                    <Image 
+                                                    key={iconIndex}
+                                                    src={item.icons[iconIndex]}
+                                                    alt='icon'
+                                                    width={20}
+                                                    height={20}
+                                                    style={{ marginRight: '0.5em'}}
+                                                    />
+                                    ))}
                                 </Box>
                                 <Typography
                                     component='a'
