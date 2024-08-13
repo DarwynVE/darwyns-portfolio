@@ -12,12 +12,14 @@ const timelineData = [
     {
         time: 'May 2024 - July 2024',
         title: 'Home Depot Software Engineer Internship',
+        subheader: '',
         details: 'During this internship me and 3 other associates were able to create and deploy a scalable application for thousands of associates to use within the company. Using products such as GCP Firestore we established cloud connectivity for data storage. We also allowed live collaboration between associates. While working, I leveraged knowledge in Full Stack Web Development, REST API\'s, Git, REACT, Vitest, Node, GCP and Docker.',
         icons: [ReactLogo, ViteLogo, JavaScriptLogo, MaterialUILogo, GCPLogo, GitHubLogo]
     },
     {
         time: 'Dec 2022 - Present',
         title: 'Home Depot Sales Associate',
+        subheader: '',
         details: 'As a sales associate I learned how to have meaningful and productive conversations with people. This job allowed me to get out of my comfort zone and learn how to work with others while working on my communication skills.',
         icons: []
     },
@@ -28,6 +30,7 @@ const projectsData = [
     {
         time: 'August 2024',
         title: 'Portfolio Project',
+        subheader: '',
         details: 'Suprise! You are currently on this project.',
         icons: [ReactLogo, NextJSLogo, TypeScriptLogo, MaterialUILogo, GitHubLogo]
     },
