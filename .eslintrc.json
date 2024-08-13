@@ -5,6 +5,6 @@
     "mui-unused-classes"
   ],
   "rules": {
-    "mui-unused-classes/no-unused-classes": 2
+    "mui-unused-classes/no-unused-classes": "error"
   }
 }
