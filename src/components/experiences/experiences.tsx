@@ -37,7 +37,7 @@ const projectsData = [
     {
         time: 'Nov 2023',
         title: 'Restaurant Website',
-        subheader: 'https://joebiden.com',
+        subheader: '',
         details: 'This was the first ever project I really worked on. It\'s a bit outdated now but during the creation I learned how REACT really works when it comes to things such as the Router or the use of components. This website is also hosted on a personal server I built using Ubuntu with NGINX Proxy Manager and Cloudflare as protection. I also learned how to use CSS to style the website and make it look more appealing.',
         icons: [ReactLogo, JavaScriptLogo]
     },
