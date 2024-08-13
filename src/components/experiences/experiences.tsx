@@ -55,7 +55,7 @@ export default function Experiences() {
             sx={{
                 display: 'flex',
                 justifyContent: 'center',
-                height: '25em',
+                height: '20em',
                 overflowY: 'scroll',
                 overflow: 'wrap',
                 background: '#e5e5e5',
@@ -86,7 +86,7 @@ export default function Experiences() {
                                  sx={{ backgroundColor: '#1baf95' }}
                                 />
                                 <TimelineConnector 
-                                sx={{ backgroundColor: '#af1b36' }}
+                                sx={{ backgroundColor: '#b2e3d9' }}
                                 />
                             </TimelineSeparator>
                             <TimelineContent>
@@ -160,7 +160,7 @@ export default function Experiences() {
                                 sx={{ backgroundColor: '#af1b36' }}
                                 />
                                 <TimelineConnector 
-                                sx={{ backgroundColor: '#1baf95' }}
+                                sx={{ backgroundColor: '#e79aa6' }}
                                 />
                             </TimelineSeparator>
                             <TimelineContent>

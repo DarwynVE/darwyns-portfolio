@@ -4,7 +4,7 @@ import { Modal, Button, Box, AppBar, Typography, Toolbar } from '@mui/material';
 import ContactInfo from '../contactInfo/contactInfo';
 
 export default function NavBars() {
-    const [open, setOpen] = useState();
+    const [open, setOpen] = useState<boolean>(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
