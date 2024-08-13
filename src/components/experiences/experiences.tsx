@@ -5,17 +5,20 @@ import TimelineOppositeContent, { timelineOppositeContentClasses } from '@mui/la
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import React, { useState } from 'react';
+import { GCPLogo, MaterialUILogo, ReactLogo, JavaScriptLogo, TypeScriptLogo, ViteLogo } from '@/images';
 
 const timelineData = [
     {
         time: 'May 2024 - July 2024',
         title: 'Home Depot Software Engineer Internship',
-        details: 'During this internship me and 3 other associates were able to create and deploy a scalable application for thousands of associates to use within the company. Using products such as GCP Firestore we established cloud connectivity for data storage. We also allowed live collaboration between associates. While working, I leveraged knowledge in Full Stack Web Development, REST API\'s, Git, REACT, Vitest, Node, GCP and Docker.'
+        details: 'During this internship me and 3 other associates were able to create and deploy a scalable application for thousands of associates to use within the company. Using products such as GCP Firestore we established cloud connectivity for data storage. We also allowed live collaboration between associates. While working, I leveraged knowledge in Full Stack Web Development, REST API\'s, Git, REACT, Vitest, Node, GCP and Docker.',
+        icons: [ReactLogo, ViteLogo, JavaScriptLogo, MaterialUILogo, GCPLogo]
     },
     {
         time: 'Dec 2022 - Present',
         title: 'Home Depot Sales Associate',
-        details: 'As a sales associate I learned how to have meaningful and productive conversations with people. This job allowed me to get out of my comfort zone and learn how to work with others while working on my communication skills.'
+        details: 'As a sales associate I learned how to have meaningful and productive conversations with people. This job allowed me to get out of my comfort zone and learn how to work with others while working on my communication skills.',
+        icons: []
     },
     // Add more items as needed
 ];
@@ -24,13 +27,15 @@ const projectsData = [
     {
         time: 'August 2024',
         title: 'Portfolio Project',
-        details: 'Suprise! You are currently on this project.'
+        details: 'Suprise! You are currently on this project.',
+        icons: [ReactLogo, TypeScriptLogo, MaterialUILogo]
     },
     {
         time: 'Nov 2023',
         title: 'Restaurant Website',
         subheader: 'https://joebiden.com',
-        details: 'This was the first ever project I really worked on. It\'s a bit outdated now but during the creation I learned how REACT really works when it comes to things such as the Router or the use of components. This website is also hosted on a personal server I built using Ubuntu with NGINX Proxy Manager and Cloudflare as protection. I also learned how to use CSS to style the website and make it look more appealing.'
+        details: 'This was the first ever project I really worked on. It\'s a bit outdated now but during the creation I learned how REACT really works when it comes to things such as the Router or the use of components. This website is also hosted on a personal server I built using Ubuntu with NGINX Proxy Manager and Cloudflare as protection. I also learned how to use CSS to style the website and make it look more appealing.',
+        icons: [ReactLogo, JavaScriptLogo]
     },
 ];
 
@@ -96,6 +101,11 @@ export default function Experiences() {
                                         >{item.title}</Typography>
                                         {expandedWork[index] ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                                     </IconButton>
+                                    <Box>
+                                    {item.icons.map((icon, iconIndex) => (
+                                        <img key={iconIndex} src={icon} alt={`${item.title} logo`} style={{ width: 24, height: 24, marginRight: 4 }} />
+                                    ))}
+                                </Box>
                                 </Box>
                                 <Typography
                                     component='a'
