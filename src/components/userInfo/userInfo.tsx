@@ -112,7 +112,7 @@ export default function UserInfo() {
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={2}>
                     <Typography sx={{ textAlign: 'center', fontWeight: '200' }}>
-                        Something will go here, I don't know what yet.
+                        Something will go here, I dont know what yet.
                     </Typography>
                 </CustomTabPanel>
             </Box>
