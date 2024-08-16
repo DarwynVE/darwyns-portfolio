@@ -43,9 +43,9 @@ const StyledTab = styled((props: StyledTabProps) => (
     fontWeight: theme.typography.fontWeightRegular,
     fontSize: theme.typography.pxToRem(15),
     marginRight: theme.spacing(1),
-    color: '#b2e3d9',
+    color: '#54bea8',
     '&.Mui-selected': {
-        color: '#1baf95',
+        color: '#129277',
         transition: 'ease-in-out 0.2s',
     },
     '&.Mui-focusVisible': {
