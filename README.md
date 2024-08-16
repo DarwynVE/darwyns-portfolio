@@ -5,3 +5,5 @@ I am also using this to test new languages and methods to do things.
 
 ## Techologies Used For This App
 REACT, MUI, Typescript
+
+Temporary GitHub Pages Link: https://darwynve.github.io/darwyns-portfolio/
