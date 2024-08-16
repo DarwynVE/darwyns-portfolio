@@ -43,9 +43,9 @@ const StyledTab = styled((props: StyledTabProps) => (
     fontWeight: theme.typography.fontWeightRegular,
     fontSize: theme.typography.pxToRem(15),
     marginRight: theme.spacing(1),
-    color: '#b2e3d9',
+    color: '#54bea8',
     '&.Mui-selected': {
-        color: '#1baf95',
+        color: '#129277',
         transition: 'ease-in-out 0.2s',
     },
     '&.Mui-focusVisible': {
@@ -99,7 +99,7 @@ export default function UserInfo() {
 
                 <CustomTabPanel value={value} index={0}>
                     <Typography sx={{ textAlign: 'center', fontWeight: '200' }}>
-                        Hey there! Welcome to my virtual portfolio. My name is Darwyn I am from New York. Some of my current hobies are Sim Racing, Cycling, and going to the gym. Software Engineering is my passion and I hope to find a position within this career.
+                        Hey there! Welcome to my virtual portfolio. My name is Darwyn and I am from New York. Some of my current hobies are Sim Racing, Cycling, and going to the gym. 
                     </Typography>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={1}>
