@@ -37,7 +37,7 @@ export default function ContactInfo({ handleClose }: ContactInfoProps) {
             }}
         >
             <List
-                sx={{ display: 'flex', flexDirection: 'column', padding: '1em' }}
+                sx={{ display: 'flex', flexDirection: 'column', padding: '0.5em' }}
             >
                 <ListItem>
                     <ListItemText
@@ -56,25 +56,46 @@ export default function ContactInfo({ handleClose }: ContactInfoProps) {
                         }} />
                 </ListItem>
                 <Divider />
+                <ListItem>
+                    <ListItemText
+                        sx={{
+                            textAlign: 'center',
+                            textDecoration: 'underline',
+                            fontSize: '12px'
+                        }}
+                    >EMAIL: ESTEVEZDARWYN@GMAIL.COM</ListItemText>
+                </ListItem>
                 <ListItem
                     component='a'
                     target='_blank'
-                    sx={{ textAlign: 'center', textDecoration: 'underline' }}
+                    sx={{
+                        textAlign: 'center',
+                        textDecoration: 'underline'
+                    }}
                     href="https://github.com/DarwynVE">
                     <ListItemText
-                        primary={'GITHUB'}
-                    />
+                    >GitHub</ListItemText>
                 </ListItem>
                 <ListItem
+                    component='a'
+                    target='_blank'
+                    sx={{
+                        textAlign: 'center',
+                        textDecoration: 'underline'
+                    }}
+                    href="https://www.linkedin.com/in/darwynve/">
+                    <ListItemText
+                    >LinkedIn</ListItemText>
+                </ListItem>
+                <ListItem
+                    sx={{
+                        textAlign: 'center',
+                        textDecoration: 'underline',
+                        fontWeight: '12px'
+                    }}
                 >
                     <ListItemText
-                        sx={{ textAlign: 'center', textDecoration: 'underline' }}
-                        primary={'LOCATION: YONKERS, NEW YORK'} />
-                </ListItem>
-                <ListItem>
-                    <ListItemText
-                        sx={{ textAlign: 'center', textDecoration: 'underline' }}
-                        primary={'EMAIL: ESTEVEZDARWYN@GMAIL.COM'} />
+                    >LOCATION: YONKERS, NEW YORK</ListItemText>
                 </ListItem>
             </List>
         </Container>
