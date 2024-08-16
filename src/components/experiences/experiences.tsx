@@ -57,42 +57,42 @@ export default function Experiences() {
         <Paper
             elevation={24}
             sx={{
-                display: {md: 'flex', xs: 'flexbox'},
+                display: { md: 'flex', xs: 'flexbox' },
                 justifyContent: 'center',
-                flexDirection: {md: 'row', xs: 'column'},
+                flexDirection: { md: 'row', xs: 'column' },
                 minHeight: '20em',
                 maxHeight: '25em',
                 overflowY: 'scroll',
                 overflow: 'wrap',
                 background: '#e5e5e5',
-                padding: {xs: 'none', md: '2em'},
-                paddingTop: {xs: '1em'},
-                paddingBottom: {xs: '1em'},
+                padding: { xs: 'none', md: '2em' },
+                paddingTop: { xs: '1em' },
+                paddingBottom: { xs: '1em' },
                 scrollbarColor: '#1baf95 #e5e5e5',
             }}
         >
             {/* This is the timeline for my work experience. */}
-            <Box sx={{ 
-                width: {md: '35em', xs: '20em'}, 
-                }}>
-                    {/* Contains the title of the area. */}
+            <Box sx={{
+                width: { md: '35em', xs: '20em' },
+            }}>
+                {/* Contains the title of the area. */}
                 <Typography
-                    sx={{ 
-                        display: 'flex', 
-                        justifyContent: 'center', 
-                        fontWeight: 'bold', 
-                        fontSize: {md: '1.5em', xs: '1em'}, 
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        fontWeight: 'bold',
+                        fontSize: { md: '1.5em', xs: '1em' },
                         textDecoration: 'underline',
-                        width: {md: 'auto', xs: '100vw'}
-                     }}
-                        >Work Experience</Typography>
+                        width: { md: 'auto', xs: '100vw' }
+                    }}
+                >Work Experience</Typography>
                 {/* Timeline for work experiences. */}
                 <Timeline
                     sx={{
-                        paddingBottom: {md: '2em', xs: '0.2em'},
-                        paddingTop: {md: '2em', xs: '0.2em'},
+                        paddingBottom: { md: '2em', xs: '0.2em' },
+                        paddingTop: { md: '2em', xs: '0.2em' },
                         [`& .${timelineOppositeContentClasses.root}`]: {
-                            flex: {md: 0.4, xs: 0.3},
+                            flex: { md: 0.4, xs: 0.3 },
                         },
                     }}
                 >
@@ -100,17 +100,17 @@ export default function Experiences() {
                         <TimelineItem key={index}>
                             {/* Contains the date. */}
                             <TimelineOppositeContent color="textSecondary"
-                            sx={{
-                                fontSize: {md: '1em', xs: '0.4em'},
-                            }}>
+                                sx={{
+                                    fontSize: { md: '1em', xs: '0.4em' },
+                                }}>
                                 {item.time}
                             </TimelineOppositeContent>
                             <TimelineSeparator>
-                                <TimelineDot 
-                                 sx={{ backgroundColor: '#1baf95' }}
+                                <TimelineDot
+                                    sx={{ backgroundColor: '#1baf95' }}
                                 />
-                                <TimelineConnector 
-                                sx={{ backgroundColor: '#b2e3d9' }}
+                                <TimelineConnector
+                                    sx={{ backgroundColor: '#b2e3d9' }}
                                 />
                             </TimelineSeparator>
                             {/* Contains the title of the experience/project. */}
@@ -122,31 +122,32 @@ export default function Experiences() {
                                         onClick={() => handleExpandWorkClick(index)}
                                     >
                                         <Typography
-                                            sx={{ 
-                                                fontWeight: 'bold', 
-                                                fontSize: {md: '16px', xs: '0.5em'},
-                                                color: 'black' 
+                                            sx={{
+                                                fontWeight: 'bold',
+                                                fontSize: { md: '16px', xs: '0.5em' },
+                                                color: 'black'
                                             }}
                                         >{item.title}</Typography>
                                         {expandedWork[index] ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                                     </IconButton>
                                 </Box>
                                 {/* Box to contain icons of languages/frameworks relating to the work experience/project. */}
-                                    <Box
+                                <Box
                                     sx={{
                                         display: 'inline-flex',
                                     }}>
                                     {item.icons.map((icon, iconIndex) => (
-                                                    <Image 
-                                                    key={iconIndex}
-                                                    src={item.icons[iconIndex]}
-                                                    alt='icon'
-                                                    width={20}
-                                                    height={20}
-                                                    style={{ marginRight: '0.5em'}}
-                                                    />
+                                        <Image
+                                            key={iconIndex}
+                                            src={item.icons[iconIndex]}
+                                            alt='icon'
+                                            width={20}
+                                            height={20}
+                                            style={{ marginRight: '0.5em' }}
+                                        />
                                     ))}
                                 </Box>
+                                {/* Subheadder to be used for any text under a title such as a link to a website worked on. */}
                                 <Typography
                                     component='a'
                                     href={item.subheader}
@@ -158,10 +159,10 @@ export default function Experiences() {
                                 <Collapse in={expandedWork[index]} timeout="auto" unmountOnExit>
                                     <Box mt={2}>
                                         <Typography variant="body2"
-                                        sx={{
-                                            fontSize: {xs: '14px'},
-                                            width: {md: 'auto', xs: '63vw'}
-                                        }}>
+                                            sx={{
+                                                fontSize: { xs: '14px' },
+                                                width: { md: 'auto', xs: '63vw' }
+                                            }}>
                                             {item.details}
                                         </Typography>
                                     </Box>
@@ -172,42 +173,43 @@ export default function Experiences() {
                 </Timeline>
             </Box>
             {/* This is the timeline for my projects.*/}
-            <Box sx={{ 
-                width: {md: '35em', xs: '20em'}, 
-                }}>
+            <Box sx={{
+                width: { md: '35em', xs: '20em' },
+            }}>
+                {/* Title of area. */}
                 <Typography
-                   sx={{ 
-                    display: 'flex', 
-                    justifyContent: 'center', 
-                    fontWeight: 'bold', 
-                    fontSize: {md: '1.5em', xs: '1em'}, 
-                    textDecoration: 'underline',
-                    width: {md: 'auto', xs: '100vw'}
-                 }}
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        fontWeight: 'bold',
+                        fontSize: { md: '1.5em', xs: '1em' },
+                        textDecoration: 'underline',
+                        width: { md: 'auto', xs: '100vw' }
+                    }}
                 >Projects</Typography>
                 <Timeline
                     sx={{
-                        paddingBottom: {md: '2em', xs: '0.2em'},
-                        paddingTop: {md: '2em', xs: '0.2em'},
+                        paddingBottom: { md: '2em', xs: '0.2em' },
+                        paddingTop: { md: '2em', xs: '0.2em' },
                         [`& .${timelineOppositeContentClasses.root}`]: {
-                            flex: {md: 0.4, xs: 0.3},
+                            flex: { md: 0.4, xs: 0.3 },
                         },
                     }}
                 >
                     {projectsData.map((item, index) => (
                         <TimelineItem key={index}>
                             <TimelineOppositeContent color="textSecondary"
-                            sx={{
-                                fontSize: {md: '1em', xs: '0.4em'},
-                            }}>
+                                sx={{
+                                    fontSize: { md: '1em', xs: '0.4em' },
+                                }}>
                                 {item.time}
                             </TimelineOppositeContent>
                             <TimelineSeparator>
-                                <TimelineDot 
-                                sx={{ backgroundColor: '#af1b36' }}
+                                <TimelineDot
+                                    sx={{ backgroundColor: '#af1b36' }}
                                 />
-                                <TimelineConnector 
-                                sx={{ backgroundColor: '#e79aa6' }}
+                                <TimelineConnector
+                                    sx={{ backgroundColor: '#e79aa6' }}
                                 />
                             </TimelineSeparator>
                             <TimelineContent>
@@ -218,11 +220,11 @@ export default function Experiences() {
                                         onClick={() => handleExpandProjectsClick(index)}
                                     >
                                         <Typography
-                                           sx={{ 
-                                            fontWeight: 'bold', 
-                                            fontSize: {md: '16px', xs: '0.5em'},
-                                            color: 'black' 
-                                        }}
+                                            sx={{
+                                                fontWeight: 'bold',
+                                                fontSize: { md: '16px', xs: '0.5em' },
+                                                color: 'black'
+                                            }}
                                         >{item.title}</Typography>
                                         {expandedProjects[index] ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                                     </IconButton>
@@ -232,14 +234,14 @@ export default function Experiences() {
                                         display: 'inline-flex',
                                     }}>
                                     {item.icons.map((icon, iconIndex) => (
-                                                    <Image 
-                                                    key={iconIndex}
-                                                    src={item.icons[iconIndex]}
-                                                    alt='icon'
-                                                    width={20}
-                                                    height={20}
-                                                    style={{ marginRight: '0.5em'}}
-                                                    />
+                                        <Image
+                                            key={iconIndex}
+                                            src={item.icons[iconIndex]}
+                                            alt='icon'
+                                            width={20}
+                                            height={20}
+                                            style={{ marginRight: '0.5em' }}
+                                        />
                                     ))}
                                 </Box>
                                 <Typography
@@ -252,11 +254,11 @@ export default function Experiences() {
                                 >{item.subheader}</Typography>
                                 <Collapse in={expandedProjects[index]} timeout="auto" unmountOnExit>
                                     <Box mt={2}>
-                                    <Typography variant="body2"
-                                        sx={{
-                                            fontSize: {xs: '14px'},
-                                            width: {md: 'auto', xs: '63vw'}
-                                        }}>
+                                        <Typography variant="body2"
+                                            sx={{
+                                                fontSize: { xs: '14px' },
+                                                width: { md: 'auto', xs: '63vw' }
+                                            }}>
                                             {item.details}
                                         </Typography>
                                     </Box>
