@@ -68,7 +68,9 @@ export default function Experiences() {
                 padding: { xs: 'none', md: '2em' },
                 paddingTop: { xs: '1em' },
                 paddingBottom: { xs: '1em' },
+                scrollbarWidth: 'thin',
                 scrollbarColor: '#1baf95 #e5e5e5',
+                scrollBehavior: 'smooth',
             }}
         >
             {/* This is the timeline for my work experience. */}
